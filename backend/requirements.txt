@@ -1,0 +1,5 @@
+openai-whisper
+google-cloud-texttospeech
+fastapi
+python-multipart
+uvicorn

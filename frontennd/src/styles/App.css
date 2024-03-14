@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+:root {
+  --font-sz-big: 5vw;
+  --font-sz-med: 2vw;
+  --font-sz-sml: 1.5vw;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: 
+	linear-gradient(0deg,  rgb(21, 36, 25) 0%, rgba(12, 83, 30, 0.772) 50%, rgba(10, 171, 48, 0.356)),
+	url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  font-family: "Nanum Myeongjo", serif;
+  font-style: normal;
+  color: black;
+}
+
+
+h1 {
+  font-weight: 400;
+  font-size: var(--font-sz-big);
+  letter-spacing: -1.5px;
+}
+.app {
+  text-align: center;
+}
+
+.app-logo {
+  border: 6px solid #152319;
+  border-radius: 100px;
+  height: 20vh;
+}
+
+.feedback-wrapper {
+  height: calc(var(--font-sz-med) + 3vw);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.feedback {
+  font-size: var(--font-sz-med);
+  width: 100vw;
+  color: #F7F3E3;
+  position: absolute;
+  top: 4vw;
+  animation: popUp 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s 1 forwards;
+}
+
+@keyframes popUp {
+  0% {
+    top: 4vw;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.question {
+  font-size: var(--font-sz-med);
+}
+
+.status {
+  position: absolute;
+  bottom: 5vh;
+  text-align: center;
+  color: #F7F3E3;
+  font-size: var(--font-sz-med);
+  width: 100vw;
+}
+.app-header {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes shrinkShift {
+  0% {    
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  20%{
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  65% {
+    opacity: 0;
+    transform: translate3d(-40vw, -10vh, 0) scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-40vw, -10vh, 0) scale(0.4);
+  }
+}
+
+.shirnk-shift {
+  animation: shrinkShift 1s cubic-bezier(.68,.55,.73,.83) forwards;
+}
+
+
+@keyframes goUp {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(0vw, -32vh, 0) scale(0.8);
+    margin-bottom: -20vh;
+  }
+}
+
+.go-up {
+  animation: goUp 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.btn {
+  padding: 15px 36px;
+  border-radius: 10px;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  font-size: var(--font-sz-med);
+  margin-top: 15vh;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: rgb(21, 36, 25);
+  border: 2px solid antiquewhite;
+  color: antiquewhite;
+}
+
+.btn:hover {
+  cursor: pointer;
+  font-weight: 800;
+  border: 2px solid #152319;
+  color: rgb(21, 36, 25);
+  background-color: antiquewhite;
+}
+
+.app-link {
+  color: #61dafb;
+}
+
+h4{
+  color: #152319;
+}
+

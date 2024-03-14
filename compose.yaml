@@ -1,0 +1,9 @@
+services:
+  frontend:
+    image: minimal_assistant_fe
+    ports: 
+      - "5000:5000"
+  backend:
+    image: minimal_assistant_be
+    ports: 
+      - "8000:8000"
